@@ -1,0 +1,36 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-21T08:36:50.599Z",
+  "summary": "The diff addresses all four requirements by fixing backend compilation errors (REQ-1), ensuring frontend builds without errors (REQ-2), aligning actor interface declarations (REQ-3), and configuring dependencies correctly (REQ-4). Backend changes include proper Motoko syntax with updated imports from mo:core, correct type definitions, async function signatures, and proper module usage. Frontend changes ensure TypeScript types match backend interfaces, with proper BigInt handling for numeric fields and correct query/mutation implementations.",
+  "missing_requirements": [],
+  "hallucinated_features": [
+    {
+      "description": "Profile setup dialog functionality that prompts users without profiles to enter their name on first login",
+      "reason": "BuildRequest explicitly states as a constraint to 'Preserve all existing functionality including user profiles' and as a non-goal 'Adding new features or functionality'. While user profile functions exist in the backend (getCallerUserProfile, saveCallerUserProfile), the interactive profile setup dialog with onInteractOutside prevention and form validation appears to be new UI functionality not mentioned in the fix requirements.",
+      "evidence": [
+        "frontend/src/components/auth/ProfileSetupDialog.tsx",
+        "frontend/src/App.tsx"
+      ]
+    },
+    {
+      "description": "Gallery lightbox modal with image navigation controls",
+      "reason": "The BuildRequest constraints state 'Do not change the visual design or styling' and non-goals include 'Changing the visual design or styling'. The lightbox implementation with Dialog component, navigation buttons (ChevronLeft/ChevronRight), and fullscreen image viewing appears to be enhanced UI functionality beyond fixing deployment errors.",
+      "evidence": [
+        "frontend/src/components/sections/GallerySection.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.85,
+  "changed_files": [
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/src/App.tsx",
+    "frontend/src/components/BookingRequestForm.tsx",
+    "frontend/src/components/admin/AdminRequestsView.tsx",
+    "frontend/src/components/auth/ProfileSetupDialog.tsx",
+    "frontend/src/components/sections/GallerySection.tsx",
+    "frontend/src/hooks/useQueries.ts",
+    "project_state.json"
+  ]
+}

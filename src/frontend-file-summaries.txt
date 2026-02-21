@@ -1,0 +1,21 @@
+{
+  "frontend/src/App.tsx": "Main application component managing view modes (public/admin), package selection state, profile setup dialog, and rendering all sections with proper prop passing to header and footer components.",
+  "frontend/src/constants/brand.ts": "Centralized brand constants with updated contact information (phone: +91 9794416439, email: Avsarvatika@gmail.com) for the Avsarvatika marriage hall venue.",
+  "frontend/src/components/SiteHeader.tsx": "Responsive header component displaying the Avsar Vatika logo from uploaded branding image with navigation menu and mobile sheet drawer.",
+  "frontend/src/components/SiteFooter.tsx": "Footer component with updated Avsar Vatika logo, contact information (phone and email as clickable links), quick links, admin access, and caffeine.ai attribution with UTM tracking.",
+  "frontend/src/components/sections/HeroSection.tsx": "Hero section featuring venue name, tagline, key highlights, and CTA buttons with background image replaced by uploaded venue photo (file_0000000095146243a4d78766e9007d41.png).",
+  "frontend/src/components/sections/AboutSection.tsx": "About section showcasing hall features with icon cards, now dynamically using BRAND.name constant to display the updated venue name.",
+  "frontend/src/components/sections/FacilitiesSection.tsx": "Facilities section displaying categorized amenities and services in a responsive card grid layout.",
+  "frontend/src/components/sections/PackagesSection.tsx": "Packages section with three pricing tiers updated to Indian Rupees (₹35,000 Classic, ₹50,000 Premium, ₹70,000 Luxury) featuring detailed inclusions and inquiry buttons.",
+  "frontend/src/components/sections/GallerySection.tsx": "Gallery section displaying venue photos with proper asset paths using workspace-relative paths, category filtering, responsive grid, and lightbox modal with navigation controls.",
+  "frontend/src/components/sections/TestimonialsSection.tsx": "Testimonials section displaying client reviews with the venue name updated to \"Avsarvatika marriage hall\" in relevant testimonial text.",
+  "frontend/src/components/sections/ContactBookingSection.tsx": "Contact section displaying updated contact information (+91 9794416439, Avsarvatika@gmail.com) with clickable tel: and mailto: links, combined with booking request form component.",
+  "frontend/src/components/BookingRequestForm.tsx": "Comprehensive booking form with proper TypeScript types for BookingRequestInput, BigInt handling for guests field, validation, and success/error states.",
+  "frontend/src/components/admin/AdminRequestsView.tsx": "Admin panel for viewing booking requests with proper TypeScript types for BookingRequest and Time, pagination controls, and formatted display of request details.",
+  "frontend/src/components/auth/LoginButton.tsx": "Reusable login/logout button component using Internet Identity with loading states and query cache clearing.",
+  "frontend/src/components/auth/ProfileSetupDialog.tsx": "Profile setup dialog that prompts authenticated users without profiles to enter their name on first login, with proper form handling and mutation states.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for all backend operations with proper TypeScript types imported from backend interface, including user profiles, admin checks, and booking request management.",
+  "frontend/src/index.css": "Global styles with warm champagne/gold OKLCH color palette for both light and dark modes, avoiding blue/purple tones.",
+  "frontend/index.html": "HTML entry point with SEO meta tags, Open Graph tags, and Twitter Card metadata all updated to feature \"Avsarvatika marriage hall\" in titles and descriptions.",
+  "frontend/tailwind.config.js": "Tailwind configuration with warm color tokens, custom fonts (Inter/Playfair Display), elegant shadows, and extended theme utilities."
+}

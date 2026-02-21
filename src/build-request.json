@@ -1,0 +1,83 @@
+{
+  "kind": "build_request",
+  "title": "Fix deployment errors and complete build",
+  "priority": "high",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Resolve any compilation errors in backend/main.mo that are preventing successful deployment",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-user-complete"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend compiles without errors",
+        "All Motoko syntax is valid",
+        "Type checking passes successfully"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Resolve any build errors in the frontend that are preventing successful deployment",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-complete"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Frontend builds without errors",
+        "All TypeScript compilation succeeds",
+        "No missing dependencies or import errors"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Ensure all actor interface declarations match the implementation in backend/main.mo",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-user-complete"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Frontend actor declarations match backend public methods",
+        "All method signatures are consistent between frontend and backend",
+        "Type definitions align correctly"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Verify all imported modules and dependencies are correctly configured",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-user-complete"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All Motoko imports resolve correctly",
+        "All npm packages are installed and compatible",
+        "No missing or circular dependencies"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify the single-actor architecture in backend/main.mo",
+    "Preserve all existing functionality including user profiles, booking requests, and admin access control",
+    "Do not change immutable frontend paths (hooks/useInternetIdentity.ts, hooks/useActor.ts, main.tsx, components/ui)",
+    "Maintain existing branding (Avsarvatika), contact info (+91 9794416439), and pricing (₹35,000/₹50,000/₹70,000)"
+  ],
+  "nonGoals": [
+    "Adding new features or functionality",
+    "Changing the visual design or styling",
+    "Modifying the database schema or state structure",
+    "Refactoring code that is working correctly"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

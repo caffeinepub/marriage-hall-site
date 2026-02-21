@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "New project",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": true,
+  "existing_features": [
+    {
+      "id": "feature-resolve-any-build-errors-in-the-frontend-that-are-preventing-successful-deployment",
+      "title": "Resolve any build errors in the frontend that are preventing successful deployment",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Resolve any compilation errors in backend/main.mo that are preventing successful deployment",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Ensure all actor interface declarations match the implementation in backend/main.mo",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Verify all imported modules and dependencies are correctly configured",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "status": "pending"
+    }
+  ],
+  "projectName": "Fix deployment errors and complete build",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
