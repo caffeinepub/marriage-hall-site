@@ -1,5 +1,7 @@
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { SiWhatsapp } from 'react-icons/si';
 import { BRAND } from '@/constants/brand';
+import { Button } from '@/components/ui/button';
 import BookingRequestForm from '../BookingRequestForm';
 
 interface ContactBookingSectionProps {
@@ -7,6 +9,11 @@ interface ContactBookingSectionProps {
 }
 
 export default function ContactBookingSection({ selectedPackage }: ContactBookingSectionProps) {
+  const handleWhatsAppContact = () => {
+    const message = encodeURIComponent('Hello! I would like to inquire about booking your marriage hall for an event.');
+    window.open(`https://wa.me/919119960204?text=${message}`, '_blank');
+  };
+
   return (
     <section id="contact" className="py-20">
       <div className="container">
@@ -28,7 +35,9 @@ export default function ContactBookingSection({ selectedPackage }: ContactBookin
                   <div>
                     <p className="font-medium">Phone</p>
                     <a 
-                      href={`tel:${BRAND.phone}`}
+                      href={`https://wa.me/919119960204`}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-muted-foreground hover:text-foreground transition-colors"
                     >
                       {BRAND.phone}
@@ -61,6 +70,18 @@ export default function ContactBookingSection({ selectedPackage }: ContactBookin
                     <p className="text-muted-foreground">Mon-Sun: 9:00 AM - 10:00 PM</p>
                   </div>
                 </div>
+              </div>
+
+              {/* WhatsApp Button */}
+              <div className="mt-6">
+                <Button
+                  onClick={handleWhatsAppContact}
+                  className="w-full bg-[#25D366] hover:bg-[#20BA5A] text-white"
+                  size="lg"
+                >
+                  <SiWhatsapp className="mr-2 h-5 w-5" />
+                  Chat on WhatsApp
+                </Button>
               </div>
             </div>
           </div>

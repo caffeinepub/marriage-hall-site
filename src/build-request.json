@@ -1,80 +1,73 @@
 {
   "kind": "build_request",
-  "title": "Fix deployment errors and complete build",
-  "priority": "high",
+  "title": "Update Cheng profile: Remove logo, add WhatsApp booking with number 9119960204",
+  "projectName": "Avsarvatika Marriage Hall",
+  "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "Resolve any compilation errors in backend/main.mo that are preventing successful deployment",
-      "target": "backend",
+      "text": "Remove the logo image from the header at XPath /html[1]/body[1]/div[1]/div[1]/header[1]/div[1]/div[1]/img[1]",
+      "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-user-complete"
+          "msg-latest"
+        ],
+        "quotes": [
+          "remove logo"
         ]
       },
       "acceptanceCriteria": [
-        "Backend compiles without errors",
-        "All Motoko syntax is valid",
-        "Type checking passes successfully"
+        "The logo image element in the site header is removed",
+        "The header layout adjusts gracefully without the logo"
       ]
     },
     {
       "id": "REQ-2",
-      "text": "Resolve any build errors in the frontend that are preventing successful deployment",
+      "text": "Add WhatsApp booking functionality with phone number +91 9119960204 to the selected elements, replacing or enhancing existing contact/booking information",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-user-complete"
+          "msg-latest"
+        ],
+        "quotes": [
+          "add whatsapp booking number 9119960204"
         ]
       },
       "acceptanceCriteria": [
-        "Frontend builds without errors",
-        "All TypeScript compilation succeeds",
-        "No missing dependencies or import errors"
+        "WhatsApp booking button or link is added with phone number +91 9119960204",
+        "Clicking the WhatsApp element opens WhatsApp with pre-filled message to the specified number",
+        "The WhatsApp integration is clearly visible and accessible to users"
       ]
     },
     {
       "id": "REQ-3",
-      "text": "Ensure all actor interface declarations match the implementation in backend/main.mo",
-      "target": "backend",
+      "text": "Update the contact phone number in the selected elements (XPaths for sections 2, 3, 4, 5, 6, 7) to display +91 9119960204 for WhatsApp booking",
+      "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-user-complete"
+          "msg-latest"
+        ],
+        "quotes": [
+          "whatsapp booking number 9119960204"
         ]
       },
       "acceptanceCriteria": [
-        "Frontend actor declarations match backend public methods",
-        "All method signatures are consistent between frontend and backend",
-        "Type definitions align correctly"
-      ]
-    },
-    {
-      "id": "REQ-4",
-      "text": "Verify all imported modules and dependencies are correctly configured",
-      "target": "both",
-      "source": {
-        "messageIds": [
-          "msg-user-complete"
-        ]
-      },
-      "acceptanceCriteria": [
-        "All Motoko imports resolve correctly",
-        "All npm packages are installed and compatible",
-        "No missing or circular dependencies"
+        "All selected contact/booking elements display the new WhatsApp number +91 9119960204",
+        "The number is formatted consistently across all locations",
+        "The number is linked to open WhatsApp when clicked"
       ]
     }
   ],
   "constraints": [
-    "Do not modify the single-actor architecture in backend/main.mo",
-    "Preserve all existing functionality including user profiles, booking requests, and admin access control",
-    "Do not change immutable frontend paths (hooks/useInternetIdentity.ts, hooks/useActor.ts, main.tsx, components/ui)",
-    "Maintain existing branding (Avsarvatika), contact info (+91 9794416439), and pricing (₹35,000/₹50,000/₹70,000)"
+    "Only modify the 7 elements identified by the provided XPath expressions",
+    "Do not change other parts of the application outside the selected elements",
+    "Preserve existing functionality in non-selected elements"
   ],
   "nonGoals": [
-    "Adding new features or functionality",
-    "Changing the visual design or styling",
-    "Modifying the database schema or state structure",
-    "Refactoring code that is working correctly"
+    "Adding email notifications",
+    "Creating an admin booking management system",
+    "Modifying backend booking logic",
+    "Changing the overall site design or color scheme"
   ],
   "imageRequirements": {
     "required": [],

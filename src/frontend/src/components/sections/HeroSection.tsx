@@ -1,4 +1,5 @@
 import { ArrowRight, Users, Car, Wind, UtensilsCrossed, Sparkles, Calendar } from 'lucide-react';
+import { SiWhatsapp } from 'react-icons/si';
 import { Button } from '@/components/ui/button';
 import { BRAND } from '@/constants/brand';
 
@@ -17,6 +18,11 @@ export default function HeroSection() {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const handleWhatsAppBooking = () => {
+    const message = encodeURIComponent('Hello! I would like to inquire about booking your marriage hall for an event.');
+    window.open(`https://wa.me/919119960204?text=${message}`, '_blank');
   };
 
   return (
@@ -64,19 +70,20 @@ export default function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Button
               size="lg"
+              onClick={handleWhatsAppBooking}
+              className="text-base bg-[#25D366] hover:bg-[#20BA5A] text-white"
+            >
+              <SiWhatsapp className="mr-2 h-5 w-5" />
+              Book via WhatsApp
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
               onClick={() => scrollToSection('gallery')}
               className="text-base"
             >
               View Gallery
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              onClick={() => scrollToSection('contact')}
-              className="text-base"
-            >
-              Book Now
             </Button>
           </div>
         </div>

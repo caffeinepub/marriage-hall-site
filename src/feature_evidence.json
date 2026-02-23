@@ -2,15 +2,31 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-resolve-any-build-errors-in-the-frontend-that-are-preventing-successful-deployment",
-      "featureTitle": "Resolve any build errors in the frontend that are preventing successful deployment",
+      "featureId": "feature-remove-the-logo-image-from-the-header-at-xpath-html-1-body-1-div-1-div-1-header-1-div-1-div-1-img-1",
+      "featureTitle": "Remove the logo image from the header at XPath /html[1]/body[1]/div[1]/div[1]/header[1]/div[1]/div[1]/img[1]",
       "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/BookingRequestForm.tsx",
-        "frontend/src/components/admin/AdminRequestsView.tsx",
-        "frontend/src/components/auth/ProfileSetupDialog.tsx",
-        "frontend/src/components/sections/GallerySection.tsx",
-        "frontend/src/hooks/useQueries.ts"
+        "frontend/src/components/SiteHeader.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-whatsapp-booking-functionality-with-phone-number-91-9119960204-to-the-selected-elements-replacing-or-enhancing-existing-contact-booking-information",
+      "featureTitle": "Add WhatsApp booking functionality with phone number +91 9119960204 to the selected elements, replacing or enhancing existing contact/booking information",
+      "files": [
+        "frontend/src/components/sections/ContactBookingSection.tsx",
+        "frontend/src/components/sections/HeroSection.tsx",
+        "frontend/src/constants/brand.ts"
       ],
       "components": [
         "authorization@4.0.0",
@@ -22,6 +38,26 @@
       ],
       "testIds": [
         "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-the-contact-phone-number-in-the-selected-elements-xpaths-for-sections-2-3-4-5-6-7-to-display-91-9119960204-for-whatsapp-booking",
+      "featureTitle": "Update the contact phone number in the selected elements (XPaths for sections 2, 3, 4, 5, 6, 7) to display +91 9119960204 for WhatsApp booking",
+      "files": [
+        "frontend/src/components/SiteFooter.tsx",
+        "frontend/src/components/sections/PackagesSection.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
       ],
       "confidence": "high"
     }

@@ -1,4 +1,5 @@
 import { Check, Sparkles } from 'lucide-react';
+import { SiWhatsapp } from 'react-icons/si';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -59,6 +60,11 @@ export default function PackagesSection({ onPackageSelect }: PackagesSectionProp
     },
   ];
 
+  const handleWhatsAppInquiry = (packageName: string) => {
+    const message = encodeURIComponent(`Hello! I would like to inquire about the ${packageName} package for my event.`);
+    window.open(`https://wa.me/919119960204?text=${message}`, '_blank');
+  };
+
   return (
     <section id="packages" className="py-20 bg-muted/30">
       <div className="container">
@@ -100,13 +106,20 @@ export default function PackagesSection({ onPackageSelect }: PackagesSectionProp
                   ))}
                 </ul>
               </CardContent>
-              <CardFooter>
+              <CardFooter className="flex flex-col gap-2">
                 <Button
                   className="w-full"
                   variant={pkg.popular ? 'default' : 'outline'}
                   onClick={() => onPackageSelect(pkg.name)}
                 >
                   Inquire About {pkg.name}
+                </Button>
+                <Button
+                  className="w-full bg-[#25D366] hover:bg-[#20BA5A] text-white"
+                  onClick={() => handleWhatsAppInquiry(pkg.name)}
+                >
+                  <SiWhatsapp className="mr-2 h-4 w-4" />
+                  WhatsApp
                 </Button>
               </CardFooter>
             </Card>

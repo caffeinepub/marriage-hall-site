@@ -33,11 +33,7 @@ export default function SiteHeader({ onAdminClick }: SiteHeaderProps) {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-20 items-center justify-between">
         <div className="flex items-center gap-3">
-          <img
-            src="/assets/Screenshot_2024-09-22-07-59-21-052_com.google.android.apps.maps.png"
-            alt={`${BRAND.name} Logo`}
-            className="h-14 w-auto object-contain"
-          />
+          <h1 className="text-xl md:text-2xl font-bold">{BRAND.name}</h1>
         </div>
 
         {/* Desktop Navigation */}

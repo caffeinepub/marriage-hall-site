@@ -15,13 +15,7 @@ export default function SiteFooter({ onAdminClick }: SiteFooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <img
-                src="/assets/Screenshot_2024-09-22-07-59-21-052_com.google.android.apps.maps.png"
-                alt={`${BRAND.name} Logo`}
-                className="h-12 w-auto object-contain"
-              />
-            </div>
+            <h3 className="text-xl font-bold mb-4">{BRAND.name}</h3>
             <p className="text-sm text-muted-foreground">
               {BRAND.tagline}
             </p>
@@ -34,7 +28,9 @@ export default function SiteFooter({ onAdminClick }: SiteFooterProps) {
               <div className="flex items-start gap-2">
                 <Phone className="h-4 w-4 mt-0.5 flex-shrink-0" />
                 <a 
-                  href={`tel:${BRAND.phone}`}
+                  href={`https://wa.me/919119960204`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="hover:text-foreground transition-colors"
                 >
                   {BRAND.phone}

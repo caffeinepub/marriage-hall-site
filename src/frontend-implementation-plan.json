@@ -1,96 +1,87 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Fix deployment errors and complete build",
+  "title": "Update Cheng profile: Remove logo, add WhatsApp booking with number 9119960204",
   "requirements": [
     {
-      "id": "REQ-2",
-      "summary": "Resolve any build errors in the frontend that are preventing successful deployment",
+      "id": "REQ-1",
+      "summary": "Remove the logo image from the header",
       "acceptanceCriteria": [
-        "Frontend builds without errors",
-        "All TypeScript compilation succeeds",
-        "No missing dependencies or import errors"
+        "The logo image element in the site header is removed",
+        "The header layout adjusts gracefully without the logo"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Review and fix any TypeScript type errors, ensure all imports resolve correctly, verify component props match expected types, and ensure state management logic is type-safe"
-        },
-        {
-          "path": "frontend/src/components/admin/AdminRequestsView.tsx",
-          "operation": "modify",
-          "description": "Fix any TypeScript compilation errors related to backend interface types (BookingRequest, Time), ensure proper handling of optional fields, verify query hook usage matches expected types from useQueries"
-        },
-        {
-          "path": "frontend/src/components/auth/ProfileSetupDialog.tsx",
-          "operation": "modify",
-          "description": "Resolve any type errors related to UserProfile interface, ensure mutation hooks are properly typed, verify dialog component props match shadcn/ui Dialog expectations"
-        },
-        {
-          "path": "frontend/src/components/BookingRequestForm.tsx",
-          "operation": "modify",
-          "description": "Fix TypeScript errors in form validation schema and react-hook-form integration, ensure BookingRequestInput type matches backend interface exactly, verify all form fields have correct types"
-        },
-        {
-          "path": "frontend/src/hooks/useQueries.ts",
-          "operation": "modify",
-          "description": "Resolve type mismatches between backend interface methods and query/mutation hook implementations, ensure proper handling of Promise return types, fix any issues with Principal type usage"
-        },
-        {
-          "path": "frontend/src/components/sections/GallerySection.tsx",
-          "operation": "modify",
-          "description": "Fix any errors related to image asset imports, ensure generated image paths use correct workspace paths (frontend/public/assets/generated/), verify all image references include proper dimensions in filenames"
-        },
-        {
           "path": "frontend/src/components/SiteHeader.tsx",
           "operation": "modify",
-          "description": "Resolve any TypeScript errors in navigation logic or component prop types, ensure smooth scrolling functions are properly typed"
-        },
-        {
-          "path": "frontend/src/components/SiteFooter.tsx",
-          "operation": "modify",
-          "description": "Fix any type errors in footer component, ensure brand constants are imported correctly from constants/brand.ts"
+          "description": "Remove the logo image element from the header component. Update the header layout to adjust gracefully without the logo while preserving the navigation functionality."
         }
       ]
     },
     {
-      "id": "REQ-4",
-      "summary": "Verify all imported modules and dependencies are correctly configured on the frontend",
+      "id": "REQ-2",
+      "summary": "Add WhatsApp booking functionality with phone number +91 9119960204",
       "acceptanceCriteria": [
-        "All npm packages are installed and compatible",
-        "No missing or circular dependencies"
+        "WhatsApp booking button or link is added with phone number +91 9119960204",
+        "Clicking the WhatsApp element opens WhatsApp with pre-filled message to the specified number",
+        "The WhatsApp integration is clearly visible and accessible to users"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/main.tsx",
+          "path": "frontend/src/constants/brand.ts",
           "operation": "modify",
-          "description": "Verify all imports from @tanstack/react-query, react, and react-dom resolve correctly, ensure QueryClient is properly configured, verify InternetIdentityProvider import path is correct"
+          "description": "Update the contact phone constant to +91 9119960204 and add a WhatsApp number constant for consistent usage across the application."
         },
         {
-          "path": "frontend/src/hooks/useActor.ts",
+          "path": "frontend/src/components/sections/HeroSection.tsx",
           "operation": "modify",
-          "description": "Ensure backend actor creation uses correct canister ID and interface imports, verify @dfinity/agent imports are available, check that backend.d.ts interface is properly referenced"
+          "description": "Add a WhatsApp booking button or link that opens WhatsApp with phone number +91 9119960204 and a pre-filled booking inquiry message. Make it prominent and accessible in the hero section's call-to-action area."
         },
         {
-          "path": "frontend/src/hooks/useInternetIdentity.ts",
+          "path": "frontend/src/components/sections/ContactBookingSection.tsx",
           "operation": "modify",
-          "description": "Verify @dfinity/identity and @dfinity/auth-client imports resolve correctly, ensure AuthClient configuration matches expected API"
+          "description": "Add WhatsApp booking functionality with phone number +91 9119960204 to the contact section. Include a clickable WhatsApp link or button that opens WhatsApp with a pre-filled message for booking inquiries."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Update contact phone number across all sections to display +91 9119960204 for WhatsApp booking",
+      "acceptanceCriteria": [
+        "All selected contact/booking elements display the new WhatsApp number +91 9119960204",
+        "The number is formatted consistently across all locations",
+        "The number is linked to open WhatsApp when clicked"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/sections/AboutSection.tsx",
+          "operation": "modify",
+          "description": "Update any contact phone references to display +91 9119960204. If phone numbers are shown, ensure they link to WhatsApp with the format wa.me/919119960204."
         },
         {
-          "path": "frontend/src/components/auth/LoginButton.tsx",
+          "path": "frontend/src/components/sections/PackagesSection.tsx",
           "operation": "modify",
-          "description": "Verify imports from hooks/useInternetIdentity and @tanstack/react-query are correct, ensure component follows authorization component usage guidelines"
+          "description": "Update contact/inquiry phone references to +91 9119960204. Ensure package inquiry actions link to WhatsApp with the format wa.me/919119960204 and include context about the selected package."
         },
         {
-          "path": "frontend/tailwind.config.js",
+          "path": "frontend/src/components/sections/TestimonialsSection.tsx",
           "operation": "modify",
-          "description": "Verify tailwindcss and related plugin imports are correctly configured, ensure custom theme extensions use valid Tailwind syntax"
+          "description": "Update any contact phone references to display +91 9119960204. If phone numbers are shown, ensure they link to WhatsApp with the format wa.me/919119960204."
         },
         {
-          "path": "frontend/src/index.css",
+          "path": "frontend/src/components/sections/FacilitiesSection.tsx",
           "operation": "modify",
-          "description": "Ensure Tailwind directives are valid and CSS custom properties follow correct syntax, verify color values are properly formatted"
+          "description": "Update any contact phone references to display +91 9119960204. If phone numbers are shown, ensure they link to WhatsApp with the format wa.me/919119960204."
+        },
+        {
+          "path": "frontend/src/components/sections/GallerySection.tsx",
+          "operation": "modify",
+          "description": "Update any contact phone references to display +91 9119960204. If phone numbers are shown, ensure they link to WhatsApp with the format wa.me/919119960204."
+        },
+        {
+          "path": "frontend/src/components/SiteFooter.tsx",
+          "operation": "modify",
+          "description": "Update the contact phone number displayed in the footer to +91 9119960204. Ensure the phone number is clickable and links to WhatsApp with the format wa.me/919119960204."
         }
       ]
     }
