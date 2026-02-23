@@ -1,11 +1,9 @@
 # Specification
 
 ## Summary
-**Goal:** Remove the logo from the header and add WhatsApp booking functionality with phone number +91 9119960204.
+**Goal:** Remove the background image from the hero section.
 
 **Planned changes:**
-- Remove the logo image from the site header
-- Add WhatsApp booking button/link with phone number +91 9119960204
-- Update contact phone numbers in multiple sections to display +91 9119960204 with WhatsApp integration
+- Remove the background image div element from the HeroSection component
 
-**User-visible outcome:** The header will no longer display a logo, and users can click WhatsApp booking elements throughout the site to directly contact +91 9119960204 via WhatsApp for bookings.
+**User-visible outcome:** The hero section will display without a background image while maintaining all other content and functionality.

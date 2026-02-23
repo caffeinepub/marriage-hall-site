@@ -1,73 +1,32 @@
 {
   "kind": "build_request",
-  "title": "Update Cheng profile: Remove logo, add WhatsApp booking with number 9119960204",
-  "projectName": "Avsarvatika Marriage Hall",
+  "title": "Remove hero section background image",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "Remove the logo image from the header at XPath /html[1]/body[1]/div[1]/div[1]/header[1]/div[1]/div[1]/img[1]",
+      "text": "Remove the background image div element from the HeroSection component (XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[1]/div[1])",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-latest"
         ],
         "quotes": [
-          "remove logo"
+          "Remove this image"
         ]
       },
       "acceptanceCriteria": [
-        "The logo image element in the site header is removed",
-        "The header layout adjusts gracefully without the logo"
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "text": "Add WhatsApp booking functionality with phone number +91 9119960204 to the selected elements, replacing or enhancing existing contact/booking information",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-latest"
-        ],
-        "quotes": [
-          "add whatsapp booking number 9119960204"
-        ]
-      },
-      "acceptanceCriteria": [
-        "WhatsApp booking button or link is added with phone number +91 9119960204",
-        "Clicking the WhatsApp element opens WhatsApp with pre-filled message to the specified number",
-        "The WhatsApp integration is clearly visible and accessible to users"
-      ]
-    },
-    {
-      "id": "REQ-3",
-      "text": "Update the contact phone number in the selected elements (XPaths for sections 2, 3, 4, 5, 6, 7) to display +91 9119960204 for WhatsApp booking",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-latest"
-        ],
-        "quotes": [
-          "whatsapp booking number 9119960204"
-        ]
-      },
-      "acceptanceCriteria": [
-        "All selected contact/booking elements display the new WhatsApp number +91 9119960204",
-        "The number is formatted consistently across all locations",
-        "The number is linked to open WhatsApp when clicked"
+        "The div element at the specified XPath is removed from HeroSection.tsx",
+        "The hero section no longer displays the background image",
+        "The component remains functional without errors"
       ]
     }
   ],
-  "constraints": [
-    "Only modify the 7 elements identified by the provided XPath expressions",
-    "Do not change other parts of the application outside the selected elements",
-    "Preserve existing functionality in non-selected elements"
-  ],
+  "constraints": [],
   "nonGoals": [
-    "Adding email notifications",
-    "Creating an admin booking management system",
-    "Modifying backend booking logic",
-    "Changing the overall site design or color scheme"
+    "Adding new images or content to the hero section",
+    "Modifying other sections of the application",
+    "Changing the overall layout or styling beyond removing the specified element"
   ],
   "imageRequirements": {
     "required": [],

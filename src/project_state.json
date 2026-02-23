@@ -1,53 +1,22 @@
 {
   "schemaVersion": "1.0.0",
   "projectStateVersion": 3,
-  "summary": "Marriage hall website with WhatsApp booking integration",
-  "architectural_notes": [
-    "WhatsApp integration for direct booking inquiries"
-  ],
+  "summary": "New project",
+  "architectural_notes": [],
   "known_issues": [],
   "isFixRequest": false,
   "existing_features": [
     {
-      "id": "feature-remove-the-logo-image-from-the-header-at-xpath-html-1-body-1-div-1-div-1-header-1-div-1-div-1-img-1",
-      "title": "Remove the logo image from the header at XPath /html[1]/body[1]/div[1]/div[1]/header[1]/div[1]/div[1]/img[1]",
+      "id": "feature-remove-the-background-image-div-element-from-the-herosection-component-xpath-html-1-body-1-div-1-div-1-main-1-section-1-div-1-div-1",
+      "title": "Remove the background image div element from the HeroSection component (XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[1]/div[1])",
       "reqIds": [
         "REQ-1"
       ],
       "version": 1
-    },
-    {
-      "id": "feature-add-whatsapp-booking-functionality-with-phone-number-91-9119960204-to-the-selected-elements-replacing-or-enhancing-existing-contact-booking-information",
-      "title": "Add WhatsApp booking functionality with phone number +91 9119960204 to the selected elements, replacing or enhancing existing contact/booking information",
-      "reqIds": [
-        "REQ-2"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-update-the-contact-phone-number-in-the-selected-elements-xpaths-for-sections-2-3-4-5-6-7-to-display-91-9119960204-for-whatsapp-booking",
-      "title": "Update the contact phone number in the selected elements (XPaths for sections 2, 3, 4, 5, 6, 7) to display +91 9119960204 for WhatsApp booking",
-      "reqIds": [
-        "REQ-3"
-      ],
-      "version": 1
     }
   ],
-  "new_feature_requests": [
-    {
-      "id": "AR-1",
-      "summary": "Add WhatsApp booking button with number 9119960204",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-2",
-      "summary": "Remove logo from profile",
-      "reqIds": [],
-      "status": "pending"
-    }
-  ],
-  "projectName": "Avsarvatika Marriage Hall",
+  "new_feature_requests": [],
+  "projectName": "Remove hero section background image",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

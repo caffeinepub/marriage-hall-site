@@ -1,87 +1,21 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Update Cheng profile: Remove logo, add WhatsApp booking with number 9119960204",
+  "title": "Remove hero section background image",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Remove the logo image from the header",
+      "summary": "Remove the background image div element from the HeroSection component",
       "acceptanceCriteria": [
-        "The logo image element in the site header is removed",
-        "The header layout adjusts gracefully without the logo"
+        "The div element at the specified XPath is removed from HeroSection.tsx",
+        "The hero section no longer displays the background image",
+        "The component remains functional without errors"
       ],
       "file_operations": [
-        {
-          "path": "frontend/src/components/SiteHeader.tsx",
-          "operation": "modify",
-          "description": "Remove the logo image element from the header component. Update the header layout to adjust gracefully without the logo while preserving the navigation functionality."
-        }
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "summary": "Add WhatsApp booking functionality with phone number +91 9119960204",
-      "acceptanceCriteria": [
-        "WhatsApp booking button or link is added with phone number +91 9119960204",
-        "Clicking the WhatsApp element opens WhatsApp with pre-filled message to the specified number",
-        "The WhatsApp integration is clearly visible and accessible to users"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/constants/brand.ts",
-          "operation": "modify",
-          "description": "Update the contact phone constant to +91 9119960204 and add a WhatsApp number constant for consistent usage across the application."
-        },
         {
           "path": "frontend/src/components/sections/HeroSection.tsx",
           "operation": "modify",
-          "description": "Add a WhatsApp booking button or link that opens WhatsApp with phone number +91 9119960204 and a pre-filled booking inquiry message. Make it prominent and accessible in the hero section's call-to-action area."
-        },
-        {
-          "path": "frontend/src/components/sections/ContactBookingSection.tsx",
-          "operation": "modify",
-          "description": "Add WhatsApp booking functionality with phone number +91 9119960204 to the contact section. Include a clickable WhatsApp link or button that opens WhatsApp with a pre-filled message for booking inquiries."
-        }
-      ]
-    },
-    {
-      "id": "REQ-3",
-      "summary": "Update contact phone number across all sections to display +91 9119960204 for WhatsApp booking",
-      "acceptanceCriteria": [
-        "All selected contact/booking elements display the new WhatsApp number +91 9119960204",
-        "The number is formatted consistently across all locations",
-        "The number is linked to open WhatsApp when clicked"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/sections/AboutSection.tsx",
-          "operation": "modify",
-          "description": "Update any contact phone references to display +91 9119960204. If phone numbers are shown, ensure they link to WhatsApp with the format wa.me/919119960204."
-        },
-        {
-          "path": "frontend/src/components/sections/PackagesSection.tsx",
-          "operation": "modify",
-          "description": "Update contact/inquiry phone references to +91 9119960204. Ensure package inquiry actions link to WhatsApp with the format wa.me/919119960204 and include context about the selected package."
-        },
-        {
-          "path": "frontend/src/components/sections/TestimonialsSection.tsx",
-          "operation": "modify",
-          "description": "Update any contact phone references to display +91 9119960204. If phone numbers are shown, ensure they link to WhatsApp with the format wa.me/919119960204."
-        },
-        {
-          "path": "frontend/src/components/sections/FacilitiesSection.tsx",
-          "operation": "modify",
-          "description": "Update any contact phone references to display +91 9119960204. If phone numbers are shown, ensure they link to WhatsApp with the format wa.me/919119960204."
-        },
-        {
-          "path": "frontend/src/components/sections/GallerySection.tsx",
-          "operation": "modify",
-          "description": "Update any contact phone references to display +91 9119960204. If phone numbers are shown, ensure they link to WhatsApp with the format wa.me/919119960204."
-        },
-        {
-          "path": "frontend/src/components/SiteFooter.tsx",
-          "operation": "modify",
-          "description": "Update the contact phone number displayed in the footer to +91 9119960204. Ensure the phone number is clickable and links to WhatsApp with the format wa.me/919119960204."
+          "description": "Remove the background image div element (the first child div with absolute positioning and background-image styling) from the HeroSection component while preserving the gradient overlay and content container"
         }
       ]
     }

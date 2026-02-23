@@ -1,9 +1,9 @@
 {
   "frontend/src/App.tsx": "Main application component managing view modes (public/admin), package selection state, profile setup dialog, and rendering all sections with proper prop passing to header and footer components.",
   "frontend/src/constants/brand.ts": "Centralized brand constants with updated contact information (phone and whatsapp: +91 9119960204, email: Avsarvatika@gmail.com) for the Avsarvatika marriage hall venue.",
-  "frontend/src/components/SiteHeader.tsx": "Responsive header component displaying the venue name as text (logo removed) with navigation menu and mobile sheet drawer.",
-  "frontend/src/components/SiteFooter.tsx": "Footer component with venue name as text (logo removed), contact information with WhatsApp link (+91 9119960204), quick links, admin access, and caffeine.ai attribution with UTM tracking.",
-  "frontend/src/components/sections/HeroSection.tsx": "Hero section featuring venue name, tagline, key highlights, and CTA buttons including prominent WhatsApp booking button with number +91 9119960204 and background image.",
+  "frontend/src/components/SiteHeader.tsx": "Responsive header component with navigation menu and mobile sheet drawer, logo image removed from header.",
+  "frontend/src/components/SiteFooter.tsx": "Footer component with Avsarvatica branding image, contact information with WhatsApp link (+91 9119960204), quick links, admin access, and caffeine.ai attribution with UTM tracking.",
+  "frontend/src/components/sections/HeroSection.tsx": "Minimal hero section component with no background image or content, serving as a placeholder section.",
   "frontend/src/components/sections/AboutSection.tsx": "About section showcasing hall features with icon cards, now dynamically using BRAND.name constant to display the updated venue name.",
   "frontend/src/components/sections/FacilitiesSection.tsx": "Facilities section displaying categorized amenities and services in a responsive card grid layout.",
   "frontend/src/components/sections/PackagesSection.tsx": "Packages section with three pricing tiers featuring detailed inclusions, inquiry buttons, and WhatsApp booking buttons for each package linking to +91 9119960204.",
@@ -16,6 +16,6 @@
   "frontend/src/components/auth/ProfileSetupDialog.tsx": "Profile setup dialog that prompts authenticated users without profiles to enter their name on first login, with proper form handling and mutation states.",
   "frontend/src/hooks/useQueries.ts": "React Query hooks for all backend operations with proper TypeScript types imported from backend interface, including user profiles, admin checks, and booking request management.",
   "frontend/src/index.css": "Global styles with warm champagne/gold OKLCH color palette for both light and dark modes, avoiding blue/purple tones.",
-  "frontend/index.html": "HTML entry point with SEO meta tags, Open Graph tags, and Twitter Card metadata all updated to feature \"Avsarvatika marriage hall\" in titles and descriptions.",
+  "frontend/index.html": "HTML entry point with SEO meta tags, Open Graph tags, and Twitter Card metadata all updated to use the Avsarvatica Party & Benquet Hall branding image for social sharing and favicon.",
   "frontend/tailwind.config.js": "Tailwind configuration with warm color tokens, custom fonts (Inter/Playfair Display), elegant shadows, and extended theme utilities."
 }
