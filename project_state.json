@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Wedding/event venue website for Avsar Vatika Marriage Hall. Project includes navigation links for About Us, Banquet, Specialist, Decor, Event, Seminar and Conference sections, WhatsApp contact numbers, and venue address.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-add-navigation-links-in-both-the-desktop-and-mobile-menus-siteheader-tsx-for-the-following-sections-about-us-our-banquet-specialist-decor-event-seminar-conference-each-link-must-smooth-scroll-to-the-corresponding-section-anchor-on-the-page",
+      "title": "Add navigation links in both the desktop and mobile menus (SiteHeader.tsx) for the following sections: About Us, Our Banquet, Specialist, Decor, Event, Seminar & Conference. Each link must smooth-scroll to the corresponding section anchor on the page.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-or-ensure-the-existence-of-the-six-page-sections-referenced-by-the-new-nav-links-our-banquet-specialist-decor-event-seminar-conference-about-us-already-exists-each-missing-section-should-be-added-as-a-distinct-styled-section-component-and-rendered-in-app-tsx-in-a-logical-order-sections-should-have-matching-id-anchors-e-g-id-banquet-id-specialist-id-decor-id-event-id-seminar-conference",
+      "title": "Create or ensure the existence of the six page sections referenced by the new nav links: Our Banquet, Specialist, Decor, Event, Seminar & Conference (About Us already exists). Each missing section should be added as a distinct, styled section component and rendered in App.tsx in a logical order. Sections should have matching id anchors (e.g., id=\"banquet\", id=\"specialist\", id=\"decor\", id=\"event\", id=\"seminar-conference\").",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-second-whatsapp-number-9794416439-to-the-brand-constants-brand-ts-and-display-it-alongside-the-existing-whatsapp-number-in-the-contactbookingsection-and-sitefooter-label-it-clearly-e-g-whatsapp-2-or-a-secondary-contact-label",
+      "title": "Add a second WhatsApp number (9794416439) to the BRAND constants (brand.ts) and display it alongside the existing WhatsApp number in the ContactBookingSection and SiteFooter. Label it clearly (e.g., 'WhatsApp 2' or a secondary contact label).",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-venue-address-in-brand-ts-and-all-display-locations-sitefooter-contactbookingsection-to-avsar-vatika-marriage-hall-dughara-chauraha-rajwal-road-khajani-gorakhpur-up-273211",
+      "title": "Update the venue address in brand.ts and all display locations (SiteFooter, ContactBookingSection) to: Avsar Vatika Marriage Hall, Dughara Chauraha, Rajwal Road, Khajani, Gorakhpur, UP – 273211.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Add navigation links for About Us, Banquet, Specialist, Decor, Event, Seminar and Conference pages/sections",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add WhatsApp number 9794416439 to contact section",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add address: Avsar Vatika Marriage Hall, Dughara Chauraha, Rajwal Road, Khajani, Gorakhpur, UP - 273211",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Avsar Vatika Marriage Hall",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

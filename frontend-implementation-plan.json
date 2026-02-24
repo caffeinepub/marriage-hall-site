@@ -1,0 +1,124 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Add nav links for key sections, second WhatsApp number, and full venue address",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Add navigation links in SiteHeader for six sections with smooth-scroll anchors",
+      "acceptanceCriteria": [
+        "The header nav (desktop and mobile) shows links: About Us, Our Banquet, Specialist, Decor, Event, Seminar & Conference",
+        "Clicking each link smooth-scrolls to the matching section anchor on the page",
+        "All six links are present in both the desktop nav bar and the mobile slide-out Sheet menu"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/SiteHeader.tsx",
+          "operation": "modify",
+          "description": "Add six new navigation links (About Us, Our Banquet, Specialist, Decor, Event, Seminar & Conference) to both the desktop nav and mobile Sheet menu. Each link must include a smooth-scroll handler that navigates to the corresponding section anchor (e.g., href='#about', href='#banquet', href='#specialist', href='#decor', href='#event', href='#seminar-conference'). Ensure the mobile Sheet closes after a link is clicked."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Create five new page sections and ensure all six sections have matching id anchors",
+      "acceptanceCriteria": [
+        "Each of the six sections exists on the page with a matching id anchor",
+        "About Us section retains its existing id anchor (e.g., id=\"about\")",
+        "All new sections are rendered in App.tsx in a sensible order",
+        "Each new section has at least a heading and brief placeholder content consistent with the venue's greenery theme"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/sections/AboutSection.tsx",
+          "operation": "modify",
+          "description": "Ensure the AboutSection component includes id=\"about\" on its root element to support smooth-scroll navigation from the header."
+        },
+        {
+          "path": "frontend/src/components/sections/BanquetSection.tsx",
+          "operation": "create",
+          "description": "Create a new BanquetSection component with id=\"banquet\" on the root element. Include a heading ('Our Banquet') and placeholder content describing the banquet hall's capacity, features, and amenities. Style consistently with the existing greenery theme using Tailwind utilities and theme tokens from index.css."
+        },
+        {
+          "path": "frontend/src/components/sections/SpecialistSection.tsx",
+          "operation": "create",
+          "description": "Create a new SpecialistSection component with id=\"specialist\" on the root element. Include a heading ('Specialist') and placeholder content highlighting the venue's expert team or specialized services (e.g., event coordinators, decorators). Use greenery theme colors and consistent spacing."
+        },
+        {
+          "path": "frontend/src/components/sections/DecorSection.tsx",
+          "operation": "create",
+          "description": "Create a new DecorSection component with id=\"decor\" on the root element. Include a heading ('Decor') and placeholder content showcasing decoration services, themes, or styles available at the venue. Maintain greenery theme styling and use appropriate Tailwind classes."
+        },
+        {
+          "path": "frontend/src/components/sections/EventSection.tsx",
+          "operation": "create",
+          "description": "Create a new EventSection component with id=\"event\" on the root element. Include a heading ('Event') and placeholder content describing the types of events hosted (weddings, receptions, parties). Apply greenery theme tokens and consistent section layout."
+        },
+        {
+          "path": "frontend/src/components/sections/SeminarConferenceSection.tsx",
+          "operation": "create",
+          "description": "Create a new SeminarConferenceSection component with id=\"seminar-conference\" on the root element. Include a heading ('Seminar & Conference') and placeholder content highlighting facilities for corporate events, seminars, and conferences. Use greenery theme colors and spacing consistent with other sections."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import the five new section components (BanquetSection, SpecialistSection, DecorSection, EventSection, SeminarConferenceSection) and render them in a logical order within the main page layout, after the existing sections. Ensure each section is placed so the id anchors work correctly with the header navigation links."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Add second WhatsApp number to brand constants and display in contact areas",
+      "acceptanceCriteria": [
+        "brand.ts exports a second WhatsApp number: 9794416439",
+        "Both WhatsApp numbers are displayed in ContactBookingSection",
+        "Both WhatsApp numbers are displayed in SiteFooter",
+        "Each WhatsApp number is a clickable wa.me link opening the respective chat"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/constants/brand.ts",
+          "operation": "modify",
+          "description": "Add a second WhatsApp number field (e.g., whatsappSecondary: '9794416439') to the BRAND constant object. Ensure the existing whatsapp field remains unchanged."
+        },
+        {
+          "path": "frontend/src/components/sections/ContactBookingSection.tsx",
+          "operation": "modify",
+          "description": "Display both BRAND.whatsapp and BRAND.whatsappSecondary as clickable WhatsApp links (wa.me URLs). Label the second number clearly (e.g., 'WhatsApp 2' or 'Alternate WhatsApp'). Maintain consistent styling with the greenery theme."
+        },
+        {
+          "path": "frontend/src/components/SiteFooter.tsx",
+          "operation": "modify",
+          "description": "Display both BRAND.whatsapp and BRAND.whatsappSecondary in the footer contact info section. Each number should be a clickable wa.me link with appropriate labels (e.g., 'WhatsApp 1', 'WhatsApp 2'). Preserve the existing footer layout and greenery theme styling."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Update venue address in brand constants and all display locations",
+      "acceptanceCriteria": [
+        "The address in brand.ts is updated to: Avsar Vatika Marriage Hall, Dughara Chauraha, Rajwal Road, Khajani, Gorakhpur, UP – 273211",
+        "The updated address is displayed in SiteFooter",
+        "The updated address is displayed in ContactBookingSection",
+        "No old or placeholder address text remains visible"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/constants/brand.ts",
+          "operation": "modify",
+          "description": "Update the address field in the BRAND constant to: 'Avsar Vatika Marriage Hall, Dughara Chauraha, Rajwal Road, Khajani, Gorakhpur, UP – 273211'. Remove any old or placeholder address text."
+        },
+        {
+          "path": "frontend/src/components/SiteFooter.tsx",
+          "operation": "modify",
+          "description": "Ensure the SiteFooter displays the updated BRAND.address. Verify no old address text is hardcoded or cached in the component."
+        },
+        {
+          "path": "frontend/src/components/sections/ContactBookingSection.tsx",
+          "operation": "modify",
+          "description": "Ensure the ContactBookingSection displays the updated BRAND.address. Verify no old address text is hardcoded or cached in the component."
+        }
+      ]
+    }
+  ]
+}

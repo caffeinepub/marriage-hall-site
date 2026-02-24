@@ -1,0 +1,99 @@
+{
+  "kind": "build_request",
+  "title": "Add nav links for key sections, second WhatsApp number, and full venue address",
+  "projectName": "Avsar Vatika",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Add navigation links in both the desktop and mobile menus (SiteHeader.tsx) for the following sections: About Us, Our Banquet, Specialist, Decor, Event, Seminar & Conference. Each link must smooth-scroll to the corresponding section anchor on the page.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "about us, our banquet, specialist,decor, event , seminar and conference make a link"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The header nav (desktop and mobile) shows links: About Us, Our Banquet, Specialist, Decor, Event, Seminar & Conference",
+        "Clicking each link smooth-scrolls to the matching section anchor on the page",
+        "All six links are present in both the desktop nav bar and the mobile slide-out Sheet menu"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Create or ensure the existence of the six page sections referenced by the new nav links: Our Banquet, Specialist, Decor, Event, Seminar & Conference (About Us already exists). Each missing section should be added as a distinct, styled section component and rendered in App.tsx in a logical order. Sections should have matching id anchors (e.g., id=\"banquet\", id=\"specialist\", id=\"decor\", id=\"event\", id=\"seminar-conference\").",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "about us, our banquet, specialist,decor, event , seminar and conference make a link"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Each of the six sections exists on the page with a matching id anchor",
+        "About Us section retains its existing id anchor (e.g., id=\"about\")",
+        "All new sections are rendered in App.tsx in a sensible order",
+        "Each new section has at least a heading and brief placeholder content consistent with the venue's greenery theme"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Add a second WhatsApp number (9794416439) to the BRAND constants (brand.ts) and display it alongside the existing WhatsApp number in the ContactBookingSection and SiteFooter. Label it clearly (e.g., 'WhatsApp 2' or a secondary contact label).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Add one more whatsapp no 9794416439"
+        ]
+      },
+      "acceptanceCriteria": [
+        "brand.ts exports a second WhatsApp number: 9794416439",
+        "Both WhatsApp numbers are displayed in ContactBookingSection",
+        "Both WhatsApp numbers are displayed in SiteFooter",
+        "Each WhatsApp number is a clickable wa.me link opening the respective chat"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Update the venue address in brand.ts and all display locations (SiteFooter, ContactBookingSection) to: Avsar Vatika Marriage Hall, Dughara Chauraha, Rajwal Road, Khajani, Gorakhpur, UP – 273211.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Add address Avsar Vatika Marriage hall dughara chauraha rajwal road khajani Gorakhpur up pin 273211"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The address in brand.ts is updated to: Avsar Vatika Marriage Hall, Dughara Chauraha, Rajwal Road, Khajani, Gorakhpur, UP – 273211",
+        "The updated address is displayed in SiteFooter",
+        "The updated address is displayed in ContactBookingSection",
+        "No old or placeholder address text remains visible"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify any files under frontend/src/hooks/ or frontend/src/components/ui/",
+    "Do not change the backend schema or any Motoko files",
+    "Preserve all existing sections and their content; only add new ones",
+    "Maintain the existing greenery OKLCH color theme throughout new sections"
+  ],
+  "nonGoals": [
+    "Creating full content pages or sub-routes for each section (sections are single-page anchors only)",
+    "Adding a new backend endpoint or data model",
+    "Changing authentication or admin functionality",
+    "Removing or redesigning any existing section"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

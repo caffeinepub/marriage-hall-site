@@ -1,0 +1,94 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-add-navigation-links-in-both-the-desktop-and-mobile-menus-siteheader-tsx-for-the-following-sections-about-us-our-banquet-specialist-decor-event-seminar-conference-each-link-must-smooth-scroll-to-the-corresponding-section-anchor-on-the-page",
+      "featureTitle": "Add navigation links in both the desktop and mobile menus (SiteHeader.tsx) for the following sections: About Us, Our Banquet, Specialist, Decor, Event, Seminar & Conference. Each link must smooth-scroll to the corresponding section anchor on the page.",
+      "files": [
+        "frontend/src/components/SiteHeader.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-or-ensure-the-existence-of-the-six-page-sections-referenced-by-the-new-nav-links-our-banquet-specialist-decor-event-seminar-conference-about-us-already-exists-each-missing-section-should-be-added-as-a-distinct-styled-section-component-and-rendered-in-app-tsx-in-a-logical-order-sections-should-have-matching-id-anchors-e-g-id-banquet-id-specialist-id-decor-id-event-id-seminar-conference",
+      "featureTitle": "Create or ensure the existence of the six page sections referenced by the new nav links: Our Banquet, Specialist, Decor, Event, Seminar & Conference (About Us already exists). Each missing section should be added as a distinct, styled section component and rendered in App.tsx in a logical order. Sections should have matching id anchors (e.g., id=\"banquet\", id=\"specialist\", id=\"decor\", id=\"event\", id=\"seminar-conference\").",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/sections/BanquetSection.tsx",
+        "frontend/src/components/sections/DecorSection.tsx",
+        "frontend/src/components/sections/EventSection.tsx",
+        "frontend/src/components/sections/SeminarConferenceSection.tsx",
+        "frontend/src/components/sections/SpecialistSection.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-second-whatsapp-number-9794416439-to-the-brand-constants-brand-ts-and-display-it-alongside-the-existing-whatsapp-number-in-the-contactbookingsection-and-sitefooter-label-it-clearly-e-g-whatsapp-2-or-a-secondary-contact-label",
+      "featureTitle": "Add a second WhatsApp number (9794416439) to the BRAND constants (brand.ts) and display it alongside the existing WhatsApp number in the ContactBookingSection and SiteFooter. Label it clearly (e.g., 'WhatsApp 2' or a secondary contact label).",
+      "files": [
+        "frontend/src/components/SiteFooter.tsx",
+        "frontend/src/components/sections/ContactBookingSection.tsx",
+        "frontend/src/constants/brand.ts"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-the-venue-address-in-brand-ts-and-all-display-locations-sitefooter-contactbookingsection-to-avsar-vatika-marriage-hall-dughara-chauraha-rajwal-road-khajani-gorakhpur-up-273211",
+      "featureTitle": "Update the venue address in brand.ts and all display locations (SiteFooter, ContactBookingSection) to: Avsar Vatika Marriage Hall, Dughara Chauraha, Rajwal Road, Khajani, Gorakhpur, UP – 273211.",
+      "files": [
+        "frontend/src/components/SiteFooter.tsx",
+        "frontend/src/components/sections/ContactBookingSection.tsx",
+        "frontend/src/constants/brand.ts"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
