@@ -1,4 +1,4 @@
-import { Flower2, Palette, Layers, Star } from 'lucide-react';
+import { Flower2, Palette, Layers } from 'lucide-react';
 
 const decorThemes = [
   {
@@ -15,11 +15,6 @@ const decorThemes = [
     icon: Layers,
     title: 'Stage & Mandap',
     description: 'Stunning stage setups and mandap designs crafted with intricate detailing for a royal look.',
-  },
-  {
-    icon: Star,
-    title: 'Lighting Design',
-    description: 'Ambient and decorative lighting solutions that transform the venue into a magical setting.',
   },
 ];
 
@@ -39,7 +34,7 @@ export default function DecorSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-14">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14">
           {decorThemes.map((theme, index) => {
             const Icon = theme.icon;
             return (

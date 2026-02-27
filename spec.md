@@ -1,12 +1,11 @@
 # Specification
 
 ## Summary
-**Goal:** Add navigation links for key page sections, a second WhatsApp contact number, and the full venue address to the Avsar Vatika website.
+**Goal:** Remove three specific elements from BrideGroomEntrySection and the following section — one image inside a card and two complete card items.
 
 **Planned changes:**
-- Add nav links in both desktop and mobile menus (SiteHeader) for: About Us, Our Banquet, Specialist, Decor, Event, Seminar & Conference — each smooth-scrolling to its section anchor
-- Create missing page sections (Our Banquet, Specialist, Decor, Event, Seminar & Conference) as styled components with id anchors, rendered in App.tsx in logical order with placeholder content matching the greenery theme
-- Add a second WhatsApp number (9794416439) to brand.ts and display both numbers as clickable wa.me links in ContactBookingSection and SiteFooter
-- Update the venue address in brand.ts and all display locations to: Avsar Vatika Marriage Hall, Dughara Chauraha, Rajwal Road, Khajani, Gorakhpur, UP – 273211
+- Remove the `img` element inside the third card of BrideGroomEntrySection (section[7])
+- Remove the fourth card/div from the content grid in section[8]
+- Remove the fifth card/div from the content grid in section[8]
 
-**User-visible outcome:** Visitors can navigate directly to each key section via the header menu, see two WhatsApp contact numbers they can tap to start a chat, and view the complete venue address in the contact and footer areas.
+**User-visible outcome:** The third card in BrideGroomEntrySection no longer displays its image, and the following section shows two fewer cards, with all remaining content and layout intact.

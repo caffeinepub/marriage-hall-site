@@ -1,23 +1,34 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-24T14:45:12.228Z",
-  "summary": "All four requirements are fully implemented in the diff. REQ-1: SiteHeader.tsx adds all six nav links (About Us, Our Banquet, Specialist, Decor, Event, Seminar & Conference) with smooth-scroll in both desktop and mobile menus. REQ-2: Five new section components are created with correct id anchors and rendered in App.tsx in logical order. REQ-3: brand.ts exports whatsappSecondary: '9794416439', and both ContactBookingSection and SiteFooter display both numbers as wa.me links. REQ-4: brand.ts address is updated to the full venue address and used in both display locations.",
-  "missing_requirements": [],
+  "generatedAt": "2026-02-27T03:58:01.796Z",
+  "summary": "The diff modifies BrideGroomEntrySection.tsx and DecorSection.tsx. REQ-1 asked to remove an img element from the third card of BrideGroomEntrySection — the new BrideGroomEntrySection.tsx uses a data-driven map and contains no img elements, so REQ-1 appears satisfied. REQ-2 and REQ-3 require removal of the 4th and 5th card/div elements from section[8] (the section immediately following BrideGroomEntrySection). DecorSection.tsx only shows 3 cards in its grid, but the project_state.json still marks all three AR items as 'pending', and there is no diff evidence showing items were deleted from a previously larger list.",
+  "missing_requirements": [
+    {
+      "id": "REQ-2",
+      "requirement": "Remove the fourth card/div element from section[8]'s content grid.",
+      "reason": "DecorSection.tsx has only 3 items in its decorThemes array. There is no diff evidence showing a 4th card was deleted from a previously larger list. project_state.json marks AR-2 as pending.",
+      "evidence": [
+        "frontend/src/components/sections/DecorSection.tsx",
+        "project_state.json"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "requirement": "Remove the fifth card/div element from section[8]'s content grid.",
+      "reason": "DecorSection.tsx has only 3 items in its decorThemes array. There is no diff evidence showing a 5th card was deleted from a previously larger list. project_state.json marks AR-3 as pending.",
+      "evidence": [
+        "frontend/src/components/sections/DecorSection.tsx",
+        "project_state.json"
+      ]
+    }
+  ],
   "hallucinated_features": [],
-  "confidence": 0.97,
+  "confidence": 0.45,
   "changed_files": [
     "frontend-file-summaries.txt",
-    "frontend/src/App.tsx",
-    "frontend/src/components/SiteFooter.tsx",
-    "frontend/src/components/SiteHeader.tsx",
-    "frontend/src/components/sections/BanquetSection.tsx",
-    "frontend/src/components/sections/ContactBookingSection.tsx",
+    "frontend/src/components/sections/BrideGroomEntrySection.tsx",
     "frontend/src/components/sections/DecorSection.tsx",
-    "frontend/src/components/sections/EventSection.tsx",
-    "frontend/src/components/sections/SeminarConferenceSection.tsx",
-    "frontend/src/components/sections/SpecialistSection.tsx",
-    "frontend/src/constants/brand.ts",
     "project_state.json"
   ]
 }

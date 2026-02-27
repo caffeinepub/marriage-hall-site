@@ -81,7 +81,7 @@ export default function ContactBookingSection({ selectedPackage }: ContactBookin
                 WhatsApp: {BRAND.whatsapp}
               </button>
               <button
-                onClick={() => handleWhatsApp(BRAND.whatsappSecondary)}
+                onClick={() => handleWhatsApp(`91${BRAND.whatsappSecondary}`)}
                 className="w-full flex items-center justify-center gap-3 py-4 px-6 bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-xl font-semibold text-lg transition-colors shadow-lg"
               >
                 <SiWhatsapp className="h-6 w-6" />

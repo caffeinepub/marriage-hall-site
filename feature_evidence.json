@@ -2,10 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-add-navigation-links-in-both-the-desktop-and-mobile-menus-siteheader-tsx-for-the-following-sections-about-us-our-banquet-specialist-decor-event-seminar-conference-each-link-must-smooth-scroll-to-the-corresponding-section-anchor-on-the-page",
-      "featureTitle": "Add navigation links in both the desktop and mobile menus (SiteHeader.tsx) for the following sections: About Us, Our Banquet, Specialist, Decor, Event, Seminar & Conference. Each link must smooth-scroll to the corresponding section anchor on the page.",
+      "featureId": "feature-remove-the-image-element-located-at-xpath-html-1-body-1-div-1-div-1-main-1-section-7-div-1-div-3-div-2-div-1-div-1-img-1-from-the-bridegroomentrysection-this-is-an-img-tag-inside-the-third-card-s-inner-div-remove-the-img-element-entirely",
+      "featureTitle": "Remove the image element located at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[7]/div[1]/div[3]/div[2]/div[1]/div[1]/img[1] from the BrideGroomEntrySection. This is an img tag inside the third card's inner div — remove the img element entirely.",
       "files": [
-        "frontend/src/components/SiteHeader.tsx"
+        "frontend/src/components/sections/BrideGroomEntrySection.tsx"
       ],
       "components": [
         "authorization@4.0.0",
@@ -22,15 +22,10 @@
       "confidence": "high"
     },
     {
-      "featureId": "feature-create-or-ensure-the-existence-of-the-six-page-sections-referenced-by-the-new-nav-links-our-banquet-specialist-decor-event-seminar-conference-about-us-already-exists-each-missing-section-should-be-added-as-a-distinct-styled-section-component-and-rendered-in-app-tsx-in-a-logical-order-sections-should-have-matching-id-anchors-e-g-id-banquet-id-specialist-id-decor-id-event-id-seminar-conference",
-      "featureTitle": "Create or ensure the existence of the six page sections referenced by the new nav links: Our Banquet, Specialist, Decor, Event, Seminar & Conference (About Us already exists). Each missing section should be added as a distinct, styled section component and rendered in App.tsx in a logical order. Sections should have matching id anchors (e.g., id=\"banquet\", id=\"specialist\", id=\"decor\", id=\"event\", id=\"seminar-conference\").",
+      "featureId": "feature-remove-the-fourth-card-div-element-located-at-xpath-html-1-body-1-div-1-div-1-main-1-section-8-div-1-div-2-div-4-div-1-from-section-8-the-section-immediately-following-bridegroomentrysection-delete-the-entire-div-4-entry-from-the-grid-list-in-that-section",
+      "featureTitle": "Remove the fourth card/div element located at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[8]/div[1]/div[2]/div[4]/div[1] from section[8] (the section immediately following BrideGroomEntrySection). Delete the entire div[4] entry from the grid/list in that section.",
       "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/sections/BanquetSection.tsx",
-        "frontend/src/components/sections/DecorSection.tsx",
-        "frontend/src/components/sections/EventSection.tsx",
-        "frontend/src/components/sections/SeminarConferenceSection.tsx",
-        "frontend/src/components/sections/SpecialistSection.tsx"
+        "frontend/src/components/sections/DecorSection.tsx"
       ],
       "components": [
         "authorization@4.0.0",
@@ -47,12 +42,10 @@
       "confidence": "high"
     },
     {
-      "featureId": "feature-add-a-second-whatsapp-number-9794416439-to-the-brand-constants-brand-ts-and-display-it-alongside-the-existing-whatsapp-number-in-the-contactbookingsection-and-sitefooter-label-it-clearly-e-g-whatsapp-2-or-a-secondary-contact-label",
-      "featureTitle": "Add a second WhatsApp number (9794416439) to the BRAND constants (brand.ts) and display it alongside the existing WhatsApp number in the ContactBookingSection and SiteFooter. Label it clearly (e.g., 'WhatsApp 2' or a secondary contact label).",
+      "featureId": "feature-remove-the-fifth-card-div-element-located-at-xpath-html-1-body-1-div-1-div-1-main-1-section-8-div-1-div-2-div-5-div-1-from-section-8-delete-the-entire-div-5-entry-from-the-grid-list-in-that-section",
+      "featureTitle": "Remove the fifth card/div element located at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[8]/div[1]/div[2]/div[5]/div[1] from section[8]. Delete the entire div[5] entry from the grid/list in that section.",
       "files": [
-        "frontend/src/components/SiteFooter.tsx",
-        "frontend/src/components/sections/ContactBookingSection.tsx",
-        "frontend/src/constants/brand.ts"
+        "frontend/src/components/sections/DecorSection.tsx"
       ],
       "components": [
         "authorization@4.0.0",
@@ -65,28 +58,6 @@
       ],
       "testIds": [
         "REQ-3"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-update-the-venue-address-in-brand-ts-and-all-display-locations-sitefooter-contactbookingsection-to-avsar-vatika-marriage-hall-dughara-chauraha-rajwal-road-khajani-gorakhpur-up-273211",
-      "featureTitle": "Update the venue address in brand.ts and all display locations (SiteFooter, ContactBookingSection) to: Avsar Vatika Marriage Hall, Dughara Chauraha, Rajwal Road, Khajani, Gorakhpur, UP – 273211.",
-      "files": [
-        "frontend/src/components/SiteFooter.tsx",
-        "frontend/src/components/sections/ContactBookingSection.tsx",
-        "frontend/src/constants/brand.ts"
-      ],
-      "components": [
-        "authorization@4.0.0",
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0",
-        "blob-storage@4.0.0"
-      ],
-      "testIds": [
-        "REQ-4"
       ],
       "confidence": "high"
     }

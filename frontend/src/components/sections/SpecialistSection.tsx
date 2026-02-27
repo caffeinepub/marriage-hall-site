@@ -1,4 +1,4 @@
-import { UserCheck, Headphones, CalendarCheck, ChefHat } from 'lucide-react';
+import { UserCheck, CalendarCheck, ChefHat } from 'lucide-react';
 
 const specialists = [
   {
@@ -6,12 +6,6 @@ const specialists = [
     name: 'Event Coordinators',
     description:
       'Our experienced event coordinators work closely with you from planning to execution, ensuring every detail is perfect.',
-  },
-  {
-    icon: Headphones,
-    name: 'AV Technicians',
-    description:
-      'Professional audio-visual technicians manage sound, lighting, and multimedia to create the ideal ambiance.',
   },
   {
     icon: CalendarCheck,
@@ -43,7 +37,7 @@ export default function SpecialistSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {specialists.map((specialist, index) => {
             const Icon = specialist.icon;
             return (

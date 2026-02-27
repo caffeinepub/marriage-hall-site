@@ -16,6 +16,7 @@ export default function SiteHeader({ onAdminClick }: SiteHeaderProps) {
     { label: 'About Us', href: '#about' },
     { label: 'Our Banquet', href: '#banquet' },
     { label: 'Specialist', href: '#specialist' },
+    { label: 'Bride & Groom Entry', href: '#bride-groom-entry' },
     { label: 'Decor', href: '#decor' },
     { label: 'Event', href: '#event' },
     { label: 'Seminar & Conference', href: '#seminar-conference' },

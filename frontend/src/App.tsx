@@ -4,17 +4,14 @@ import { useGetCallerUserProfile, useIsCallerAdmin } from './hooks/useQueries';
 import SiteHeader from './components/SiteHeader';
 import SiteFooter from './components/SiteFooter';
 import HeroSection from './components/sections/HeroSection';
-import AboutSection from './components/sections/AboutSection';
-import BanquetSection from './components/sections/BanquetSection';
 import SpecialistSection from './components/sections/SpecialistSection';
-import DecorSection from './components/sections/DecorSection';
 import EventSection from './components/sections/EventSection';
-import SeminarConferenceSection from './components/sections/SeminarConferenceSection';
 import FacilitiesSection from './components/sections/FacilitiesSection';
 import PackagesSection from './components/sections/PackagesSection';
 import GallerySection from './components/sections/GallerySection';
 import TestimonialsSection from './components/sections/TestimonialsSection';
 import ContactBookingSection from './components/sections/ContactBookingSection';
+import BrideGroomEntrySection from './components/sections/BrideGroomEntrySection';
 import AdminRequestsView from './components/admin/AdminRequestsView';
 import ProfileSetupDialog from './components/auth/ProfileSetupDialog';
 
@@ -77,12 +74,9 @@ export default function App() {
       <SiteHeader onAdminClick={handleAdminClick} />
       <main>
         <HeroSection />
-        <AboutSection />
-        <BanquetSection />
         <SpecialistSection />
-        <DecorSection />
+        <BrideGroomEntrySection />
         <EventSection />
-        <SeminarConferenceSection />
         <FacilitiesSection />
         <PackagesSection onPackageSelect={handlePackageSelect} />
         <GallerySection />
