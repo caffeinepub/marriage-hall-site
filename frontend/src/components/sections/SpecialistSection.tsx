@@ -6,18 +6,21 @@ const specialists = [
     name: 'Event Coordinators',
     description:
       'Our experienced event coordinators work closely with you from planning to execution, ensuring every detail is perfect.',
+    showImage: false,
   },
   {
     icon: CalendarCheck,
     name: 'Wedding Planners',
     description:
       'Dedicated wedding specialists who transform your dream ceremony into a flawless, memorable reality.',
+    showImage: false,
   },
   {
     icon: ChefHat,
     name: 'Culinary Experts',
     description:
       'Skilled chefs and catering specialists craft exquisite menus tailored to your taste and dietary preferences.',
+    showImage: true,
   },
 ];
 
@@ -43,13 +46,26 @@ export default function SpecialistSection() {
             return (
               <div
                 key={index}
-                className="flex flex-col items-center text-center p-8 rounded-2xl bg-card border border-primary/20 hover:border-primary/60 hover:shadow-md transition-all"
+                className="flex flex-col items-center text-center rounded-2xl bg-card border border-primary/20 hover:border-primary/60 hover:shadow-md transition-all overflow-hidden"
               >
-                <div className="h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center mb-5">
-                  <Icon className="h-8 w-8 text-primary" />
+                {/* Card image — only shown for cards with showImage: true */}
+                {specialist.showImage && (
+                  <div className="w-full h-48 overflow-hidden">
+                    <img
+                      src="/assets/generated/specialist-card-bg.dim_600x400.jpg"
+                      alt={specialist.name}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                )}
+                {/* Card content */}
+                <div className="p-6 flex flex-col items-center">
+                  <div className={`h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 ${specialist.showImage ? '-mt-10 relative z-10 border-2 border-card shadow' : ''}`}>
+                    <Icon className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-3 text-foreground">{specialist.name}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{specialist.description}</p>
                 </div>
-                <h3 className="text-lg font-semibold mb-3 text-foreground">{specialist.name}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{specialist.description}</p>
               </div>
             );
           })}

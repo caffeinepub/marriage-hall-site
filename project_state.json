@@ -7,32 +7,16 @@
   "isFixRequest": false,
   "existing_features": [
     {
-      "id": "feature-remove-the-image-element-located-at-xpath-html-1-body-1-div-1-div-1-main-1-section-7-div-1-div-3-div-2-div-1-div-1-img-1-from-the-bridegroomentrysection-this-is-an-img-tag-inside-the-third-card-s-inner-div-remove-the-img-element-entirely",
-      "title": "Remove the image element located at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[7]/div[1]/div[3]/div[2]/div[1]/div[1]/img[1] from the BrideGroomEntrySection. This is an img tag inside the third card's inner div — remove the img element entirely.",
+      "id": "feature-remove-the-gallery-section-from-the-landing-page-this-includes-removing-the-gallerysection-component-from-app-tsx-and-deleting-or-leaving-unused-the-gallerysection-tsx-file-any-navigation-links-in-siteheader-or-sitefooter-pointing-to-the-gallery-section-anchor-should-also-be-removed",
+      "title": "Remove the Gallery section from the landing page. This includes removing the GallerySection component from App.tsx and deleting or leaving unused the GallerySection.tsx file. Any navigation links in SiteHeader or SiteFooter pointing to the gallery section anchor should also be removed.",
       "reqIds": [
         "REQ-1"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-remove-the-fourth-card-div-element-located-at-xpath-html-1-body-1-div-1-div-1-main-1-section-8-div-1-div-2-div-4-div-1-from-section-8-the-section-immediately-following-bridegroomentrysection-delete-the-entire-div-4-entry-from-the-grid-list-in-that-section",
-      "title": "Remove the fourth card/div element located at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[8]/div[1]/div[2]/div[4]/div[1] from section[8] (the section immediately following BrideGroomEntrySection). Delete the entire div[4] entry from the grid/list in that section.",
-      "reqIds": [
-        "REQ-2"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-remove-the-fifth-card-div-element-located-at-xpath-html-1-body-1-div-1-div-1-main-1-section-8-div-1-div-2-div-5-div-1-from-section-8-delete-the-entire-div-5-entry-from-the-grid-list-in-that-section",
-      "title": "Remove the fifth card/div element located at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[8]/div[1]/div[2]/div[5]/div[1] from section[8]. Delete the entire div[5] entry from the grid/list in that section.",
-      "reqIds": [
-        "REQ-3"
       ],
       "version": 1
     }
   ],
   "new_feature_requests": [],
-  "projectName": "Remove selected image and two card elements from BrideGroomEntrySection and related section",
+  "projectName": "Remove Gallery section",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

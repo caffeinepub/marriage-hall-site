@@ -8,8 +8,6 @@ import SpecialistSection from './components/sections/SpecialistSection';
 import EventSection from './components/sections/EventSection';
 import FacilitiesSection from './components/sections/FacilitiesSection';
 import PackagesSection from './components/sections/PackagesSection';
-import GallerySection from './components/sections/GallerySection';
-import TestimonialsSection from './components/sections/TestimonialsSection';
 import ContactBookingSection from './components/sections/ContactBookingSection';
 import BrideGroomEntrySection from './components/sections/BrideGroomEntrySection';
 import AdminRequestsView from './components/admin/AdminRequestsView';
@@ -79,8 +77,6 @@ export default function App() {
         <EventSection />
         <FacilitiesSection />
         <PackagesSection onPackageSelect={handlePackageSelect} />
-        <GallerySection />
-        <TestimonialsSection />
         <ContactBookingSection selectedPackage={selectedPackage} />
       </main>
       <SiteFooter onAdminClick={handleAdminClick} />

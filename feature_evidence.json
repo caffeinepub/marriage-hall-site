@@ -2,10 +2,12 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-remove-the-image-element-located-at-xpath-html-1-body-1-div-1-div-1-main-1-section-7-div-1-div-3-div-2-div-1-div-1-img-1-from-the-bridegroomentrysection-this-is-an-img-tag-inside-the-third-card-s-inner-div-remove-the-img-element-entirely",
-      "featureTitle": "Remove the image element located at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[7]/div[1]/div[3]/div[2]/div[1]/div[1]/img[1] from the BrideGroomEntrySection. This is an img tag inside the third card's inner div — remove the img element entirely.",
+      "featureId": "feature-remove-the-gallery-section-from-the-landing-page-this-includes-removing-the-gallerysection-component-from-app-tsx-and-deleting-or-leaving-unused-the-gallerysection-tsx-file-any-navigation-links-in-siteheader-or-sitefooter-pointing-to-the-gallery-section-anchor-should-also-be-removed",
+      "featureTitle": "Remove the Gallery section from the landing page. This includes removing the GallerySection component from App.tsx and deleting or leaving unused the GallerySection.tsx file. Any navigation links in SiteHeader or SiteFooter pointing to the gallery section anchor should also be removed.",
       "files": [
-        "frontend/src/components/sections/BrideGroomEntrySection.tsx"
+        "frontend/src/App.tsx",
+        "frontend/src/components/SiteFooter.tsx",
+        "frontend/src/components/SiteHeader.tsx"
       ],
       "components": [
         "authorization@4.0.0",
@@ -18,46 +20,6 @@
       ],
       "testIds": [
         "REQ-1"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-remove-the-fourth-card-div-element-located-at-xpath-html-1-body-1-div-1-div-1-main-1-section-8-div-1-div-2-div-4-div-1-from-section-8-the-section-immediately-following-bridegroomentrysection-delete-the-entire-div-4-entry-from-the-grid-list-in-that-section",
-      "featureTitle": "Remove the fourth card/div element located at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[8]/div[1]/div[2]/div[4]/div[1] from section[8] (the section immediately following BrideGroomEntrySection). Delete the entire div[4] entry from the grid/list in that section.",
-      "files": [
-        "frontend/src/components/sections/DecorSection.tsx"
-      ],
-      "components": [
-        "authorization@4.0.0",
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0",
-        "blob-storage@4.0.0"
-      ],
-      "testIds": [
-        "REQ-2"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-remove-the-fifth-card-div-element-located-at-xpath-html-1-body-1-div-1-div-1-main-1-section-8-div-1-div-2-div-5-div-1-from-section-8-delete-the-entire-div-5-entry-from-the-grid-list-in-that-section",
-      "featureTitle": "Remove the fifth card/div element located at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[8]/div[1]/div[2]/div[5]/div[1] from section[8]. Delete the entire div[5] entry from the grid/list in that section.",
-      "files": [
-        "frontend/src/components/sections/DecorSection.tsx"
-      ],
-      "components": [
-        "authorization@4.0.0",
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0",
-        "blob-storage@4.0.0"
-      ],
-      "testIds": [
-        "REQ-3"
       ],
       "confidence": "high"
     }

@@ -1,68 +1,31 @@
 {
   "kind": "build_request",
-  "title": "Remove selected image and two card elements from BrideGroomEntrySection and related section",
+  "title": "Remove Gallery section",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "Remove the image element located at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[7]/div[1]/div[3]/div[2]/div[1]/div[1]/img[1] from the BrideGroomEntrySection. This is an img tag inside the third card's inner div — remove the img element entirely.",
+      "text": "Remove the Gallery section from the landing page. This includes removing the GallerySection component from App.tsx and deleting or leaving unused the GallerySection.tsx file. Any navigation links in SiteHeader or SiteFooter pointing to the gallery section anchor should also be removed.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-4"
+          "msg-1"
         ],
         "quotes": [
-          "Remove this"
+          "Remove gailary section"
         ]
       },
       "acceptanceCriteria": [
-        "The image element inside the third card of BrideGroomEntrySection (section[7]) is no longer rendered.",
-        "The rest of the card content remains intact and layout is not broken."
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "text": "Remove the fourth card/div element located at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[8]/div[1]/div[2]/div[4]/div[1] from section[8] (the section immediately following BrideGroomEntrySection). Delete the entire div[4] entry from the grid/list in that section.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-4"
-        ],
-        "quotes": [
-          "Remove this"
-        ]
-      },
-      "acceptanceCriteria": [
-        "The fourth card/item in section[8]'s content grid is no longer rendered.",
-        "The surrounding cards and layout remain intact."
-      ]
-    },
-    {
-      "id": "REQ-3",
-      "text": "Remove the fifth card/div element located at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[8]/div[1]/div[2]/div[5]/div[1] from section[8]. Delete the entire div[5] entry from the grid/list in that section.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-4"
-        ],
-        "quotes": [
-          "Remove this"
-        ]
-      },
-      "acceptanceCriteria": [
-        "The fifth card/item in section[8]'s content grid is no longer rendered.",
-        "The surrounding cards and layout remain intact."
+        "The Gallery section is no longer rendered on the landing page.",
+        "No broken anchor links to the gallery section remain in the header or footer navigation.",
+        "All other sections remain intact and unaffected."
       ]
     }
   ],
-  "constraints": [
-    "Only remove the three specified elements; do not alter any other content or styling.",
-    "Do not modify any files under frontend/src/hooks/ or frontend/src/components/ui."
-  ],
+  "constraints": [],
   "nonGoals": [
-    "Redesigning or restructuring any sections beyond the three targeted element removals.",
-    "Adding new content or replacing the removed elements with alternatives.",
-    "Any backend changes."
+    "Modifying any backend logic or data models.",
+    "Removing or modifying any other sections of the page."
   ],
   "imageRequirements": {
     "required": [],

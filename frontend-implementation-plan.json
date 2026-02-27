@@ -1,50 +1,31 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Remove selected image and two card elements from BrideGroomEntrySection and DecorSection",
+  "title": "Remove Gallery section",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Remove the image element from the third card in BrideGroomEntrySection",
+      "summary": "Remove the Gallery section from the landing page including component removal and navigation link cleanup",
       "acceptanceCriteria": [
-        "The image element inside the third card of BrideGroomEntrySection (section[7]) is no longer rendered.",
-        "The rest of the card content remains intact and layout is not broken."
+        "The Gallery section is no longer rendered on the landing page.",
+        "No broken anchor links to the gallery section remain in the header or footer navigation.",
+        "All other sections remain intact and unaffected."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/sections/BrideGroomEntrySection.tsx",
+          "path": "frontend/src/App.tsx",
           "operation": "modify",
-          "description": "Remove the <img> element from the third card (the one with 'Fog & Smoke Effects' title). The card structure and text content should remain, only the image tag within the card's inner div should be deleted."
-        }
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "summary": "Remove the fourth card element from DecorSection",
-      "acceptanceCriteria": [
-        "The fourth card/item in section[8]'s content grid is no longer rendered.",
-        "The surrounding cards and layout remain intact."
-      ],
-      "file_operations": [
+          "description": "Remove the GallerySection import statement and the <GallerySection /> component from the page composition. Ensure all other section components remain in their current rendering order."
+        },
         {
-          "path": "frontend/src/components/sections/DecorSection.tsx",
+          "path": "frontend/src/components/SiteHeader.tsx",
           "operation": "modify",
-          "description": "Remove the fourth card element (likely the 'Lighting Design' card) from the DecorSection grid. Delete the entire card div and its contents, keeping the first three cards intact."
-        }
-      ]
-    },
-    {
-      "id": "REQ-3",
-      "summary": "Remove the fifth card element from DecorSection",
-      "acceptanceCriteria": [
-        "The fifth card/item in section[8]'s content grid is no longer rendered.",
-        "The surrounding cards and layout remain intact."
-      ],
-      "file_operations": [
+          "description": "Remove any navigation link that points to the gallery section anchor (e.g., href='#gallery'). Update both the desktop nav links array and the mobile sheet menu items to exclude the gallery link."
+        },
         {
-          "path": "frontend/src/components/sections/DecorSection.tsx",
+          "path": "frontend/src/components/SiteFooter.tsx",
           "operation": "modify",
-          "description": "Remove the fifth card element from the DecorSection grid if it exists. Delete the entire card div and its contents. After this change, DecorSection should display only the first three cards."
+          "description": "Remove any quick navigation link that points to the gallery section anchor (e.g., href='#gallery'). Ensure remaining footer links are properly formatted and functional."
         }
       ]
     }

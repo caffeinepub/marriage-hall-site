@@ -20,7 +20,6 @@ export default function SiteHeader({ onAdminClick }: SiteHeaderProps) {
     { label: 'Decor', href: '#decor' },
     { label: 'Event', href: '#event' },
     { label: 'Seminar & Conference', href: '#seminar-conference' },
-    { label: 'Gallery', href: '#gallery' },
     { label: 'Contact', href: '#contact' },
   ];
 
